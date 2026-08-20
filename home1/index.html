@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THANH THU Foreign Language</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'], serif: ['"Playfair Display"', 'serif'] },
+                    colors: { primary: '#00338c', secondary: '#cc0518', surface: '#F8FAFC', accent: '#3b82f6' }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #F8FAFC; color: #00338c; overflow-x: hidden; }
+        .glass-nav { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
+        .blob-shape { animation: morph 8s ease-in-out infinite; border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+        @keyframes morph { 0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; } 50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; } 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; } }
+        .bento-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid rgba(255,255,255,0.8); }
+        .bento-card:hover { transform: translateY(-5px) scale(1.02); box-shadow: 0 30px 60px rgba(0,51,140,0.1); z-index: 10; }
+        .text-gradient { background: linear-gradient(135deg, #00338c, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hover-trigger .hover-target { max-height: 0; opacity: 0; transition: all 0.5s ease; overflow: hidden; }
+        .hover-trigger:hover .hover-target { max-height: 200px; opacity: 1; margin-top: 1rem; }
+    </style>
+</head>
+
+<body class="font-sans antialiased">
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300 py-4 top-0">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3">
+                <img src="../assets/logo.jpg" alt="Logo" class="h-12 rounded shadow-sm">
+                <span class="font-extrabold text-xl tracking-tight uppercase">THANH THU</span>
+            </a>
+            <div class="hidden md:flex gap-8">
+                <a href="#about" class="font-semibold text-sm hover:text-secondary transition-colors relative group">
+                    Giới thiệu<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#courses" class="font-semibold text-sm hover:text-secondary transition-colors relative group">
+                    Khóa học<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all group-hover:w-full"></span>
+                </a>
+            </div>
+            <a href="#contact" class="px-6 py-2.5 bg-primary text-white rounded-full text-sm font-bold hover:bg-secondary transition-colors shadow-lg hover:shadow-secondary/30">
+                Nhận tư vấn
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Dynamic Split) -->
+    <section class="relative min-h-screen flex items-center pt-24 overflow-hidden">
+        <!-- Animated Background Elements -->
+        <div class="absolute top-20 -right-20 w-[600px] h-[600px] bg-blue-100/60 blob-shape mix-blend-multiply blur-2xl z-0"></div>
+        <div class="absolute bottom-20 -left-20 w-[500px] h-[500px] bg-red-50/50 blob-shape mix-blend-multiply blur-2xl z-0" style="animation-delay: -4s;"></div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 w-full relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-sm mb-6 border border-gray-100">
+                        <span class="relative flex h-3 w-3"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span></span>
+                        <span class="text-xs font-bold uppercase tracking-wider text-gray-600">Định hình tương lai</span>
+                    </div>
+                    <h1 class="text-6xl lg:text-[5rem] font-extrabold leading-[1.05] tracking-tight mb-8">
+                        Vượt qua giới hạn <br>
+                        <span class="text-gradient">Ngôn ngữ.</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-10 max-w-lg font-medium">Hành trình làm chủ tiếng Anh không cần khô khan. Tại THANH THU, chúng tôi biến mỗi buổi học thành một trải nghiệm đầy cảm hứng và sáng tạo.</p>
+                    <div class="flex gap-4">
+                        <a href="#courses" class="px-8 py-4 bg-primary text-white rounded-full font-bold hover:bg-primary/90 transition-all shadow-[0_10px_30px_rgba(0,51,140,0.2)] hover:-translate-y-1">Bắt đầu ngay</a>
+                        <div class="flex items-center gap-4 ml-4">
+                            <div class="flex -space-x-3">
+                                <img class="w-10 h-10 rounded-full border-2 border-white" src="https://i.pravatar.cc/100?img=1" alt="Avatar">
+                                <img class="w-10 h-10 rounded-full border-2 border-white" src="https://i.pravatar.cc/100?img=2" alt="Avatar">
+                                <img class="w-10 h-10 rounded-full border-2 border-white" src="https://i.pravatar.cc/100?img=3" alt="Avatar">
+                            </div>
+                            <span class="text-sm font-semibold text-gray-600">+1000<br>Học viên</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-5 relative">
+                    <div class="relative w-full aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Students" class="w-full h-full object-cover">
+                        <!-- Floating Glass Card -->
+                        <div class="absolute bottom-6 left-6 right-6 bg-white/20 backdrop-blur-xl border border-white/40 p-5 rounded-2xl">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-2xl">🚀</div>
+                                <div class="text-white">
+                                    <p class="font-bold text-lg">Giao tiếp tự tin</p>
+                                    <p class="text-sm opacity-90">100% học viên hài lòng</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bento Grid About Section -->
+    <section id="about" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-16 text-center">Trải nghiệm <span class="text-gradient">Đột Phá</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[250px]">
+                <!-- Large Feature -->
+                <div class="md:col-span-2 md:row-span-2 bg-primary rounded-3xl p-10 text-white bento-card relative overflow-hidden flex flex-col justify-end group">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Study" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-50 transition-opacity mix-blend-overlay">
+                    <div class="relative z-10">
+                        <h3 class="text-3xl font-bold mb-4">Môi trường 100% Tiếng Anh</h3>
+                        <p class="font-medium text-white/80">Không gian tương tác mở giúp học viên phản xạ tự nhiên như người bản xứ, loại bỏ hoàn toàn thói quen dịch nhẩm.</p>
+                    </div>
+                </div>
+                
+                <!-- Small Features -->
+                <div class="md:col-span-2 bg-blue-50 rounded-3xl p-8 bento-card flex flex-col justify-center">
+                    <div class="w-12 h-12 bg-blue-100 text-accent rounded-xl flex items-center justify-center mb-4"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg></div>
+                    <h3 class="text-xl font-bold mb-2">Tư duy phản biện</h3>
+                    <p class="text-gray-600 text-sm">Lồng ghép kỹ năng mềm, thuyết trình và tranh biện vào từng bài học.</p>
+                </div>
+                
+                <div class="bg-red-50 rounded-3xl p-8 bento-card flex flex-col justify-center">
+                    <h3 class="text-4xl font-extrabold text-secondary mb-2">Cam Kết</h3>
+                    <p class="text-gray-600 text-sm font-medium">Chuẩn đầu ra Quốc Tế (Cambridge)</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-3xl p-8 bento-card flex flex-col justify-center items-center text-center">
+                    <div class="text-5xl mb-2">🏆</div>
+                    <p class="font-bold text-gray-800">Đội ngũ Giáo viên tinh hoa</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Courses Section -->
+    <section id="courses" class="py-24 bg-surface">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="mb-16">
+                <h2 class="text-4xl font-extrabold mb-4">Chọn Hành Trình Của Bạn</h2>
+                <p class="text-gray-600">Click vào từng khóa học để khám phá lộ trình chi tiết.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Course Card Hover Trigger -->
+                <div class="bg-white rounded-3xl p-8 shadow-sm hover-trigger bento-card border-l-4 border-l-green-400 cursor-pointer">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-widest text-green-500 mb-2 block">3 - 5 Tuổi</span>
+                            <h3 class="text-2xl font-extrabold">Mầm Non (Mẫu Giáo)</h3>
+                        </div>
+                        <div class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-green-50 group-hover:text-green-500 transition-colors">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </div>
+                    </div>
+                    <div class="hover-target">
+                        <p class="text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-4">Phương pháp "Học mà chơi" qua bài hát, trò chơi. Tập trung phát âm chuẩn và phản xạ nghe - nói tự nhiên ngay từ giai đoạn vàng.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 shadow-sm hover-trigger bento-card border-l-4 border-l-blue-400 cursor-pointer">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-widest text-blue-500 mb-2 block">6 - 10 Tuổi</span>
+                            <h3 class="text-2xl font-extrabold">Thiếu Nhi</h3>
+                        </div>
+                        <div class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 transition-colors">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </div>
+                    </div>
+                    <div class="hover-target">
+                        <p class="text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-4">Xây dựng nền tảng vững chắc 4 kỹ năng chuẩn quốc tế. Rèn luyện tư duy phản biện, làm việc nhóm và tự tin giao tiếp toàn cầu.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 shadow-sm hover-trigger bento-card border-l-4 border-l-purple-400 cursor-pointer">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-widest text-purple-500 mb-2 block">11 - 18 Tuổi</span>
+                            <h3 class="text-2xl font-extrabold">Thiếu Niên</h3>
+                        </div>
+                        <div class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 transition-colors">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </div>
+                    </div>
+                    <div class="hover-target">
+                        <p class="text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-4">Bứt phá toàn diện học thuật. Trọng tâm vào kỹ năng thuyết trình, viết luận sáng tạo và bản lĩnh thi cử vững vàng.</p>
+                    </div>
+                </div>
+
+                <div class="bg-primary rounded-3xl p-8 shadow-sm hover-trigger bento-card border-l-4 border-l-secondary cursor-pointer text-white">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-widest text-white/70 mb-2 block">Chứng chỉ</span>
+                            <h3 class="text-2xl font-extrabold">Luyện thi Cambridge</h3>
+                        </div>
+                        <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white transition-colors">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </div>
+                    </div>
+                    <div class="hover-target">
+                        <p class="text-white/80 text-sm leading-relaxed border-t border-white/20 pt-4">Starters - Movers - Flyers. Chuẩn hóa Nghe-Nói-Đọc-Viết, làm quen áp lực phòng thi, tạo bước đệm chinh phục các bậc cao hơn.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Contact Section -->
+    <section id="contact" class="py-24 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-6 relative z-10">
+            <div class="bg-white rounded-[3rem] p-12 text-center shadow-[0_40px_100px_rgba(0,51,140,0.1)] border border-gray-100 relative overflow-hidden">
+                <div class="absolute -top-32 -left-32 w-64 h-64 bg-secondary/10 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-32 -right-32 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+                
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-6 relative z-10">Sẵn sàng nâng tầm <br> Tiếng Anh của bạn?</h2>
+                <p class="text-gray-600 mb-10 max-w-lg mx-auto relative z-10">Đội ngũ THANH THU luôn sẵn sàng thiết kế lộ trình học tập tối ưu nhất dành riêng cho bạn.</p>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-4 relative z-10">
+                    <a href="tel:0858208123" class="px-8 py-4 bg-secondary text-white rounded-full font-bold text-lg hover:bg-secondary/90 transition-transform hover:scale-105 shadow-lg flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        0858 208 123
+                    </a>
+                    <a href="#" class="px-8 py-4 bg-gray-50 text-primary border border-gray-200 rounded-full font-bold text-lg hover:bg-gray-100 transition-transform hover:scale-105 shadow-sm flex items-center justify-center gap-2">
+                        Nhắn tin Zalo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 py-12 border-t border-gray-200 text-center">
+        <div class="flex justify-center mb-6">
+            <img src="../assets/logo.jpg" alt="Logo" class="h-12 rounded grayscale opacity-70">
+        </div>
+        <p class="text-sm text-gray-500 font-medium">© 2026 THANH THU Foreign Language Center.<br>Số 6 Nguyễn Trung Trực, ấp Tân Thạnh, tỉnh Tây Ninh.</p>
+    </footer>
+</body>
+</html>

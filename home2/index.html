@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THANH THU Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Lora', 'serif'] },
+                    colors: { cream: '#FDFBF7', primary: '#0047AB', secondary: '#FF4B4B', accent: '#FFD166' }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #FDFBF7; color: #0047AB; overflow-x: hidden; }
+        /* Asymmetrical Layout specific utilities */
+        .outline-text { color: transparent; -webkit-text-stroke: 1px rgba(0,71,171,0.2); }
+        .parallax-img { transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1); }
+        .parallax-wrapper:hover .parallax-img { transform: scale(1.05); }
+        .arch-clip { clip-path: path('M0,100 C0,0 200,0 200,100 C200,200 0,200 0,100 Z'); } /* Fallback */
+        .border-organic { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+        
+        .sticky-section { position: sticky; top: 120px; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #FDFBF7; }
+        ::-webkit-scrollbar-thumb { background: #D4C4B7; border-radius: 4px; }
+    </style>
+</head>
+
+<body class="font-sans font-normal">
+    <!-- Minimalist Header -->
+    <header class="w-full py-8 px-6 lg:px-12 flex justify-between items-center absolute top-0 z-50">
+        <a href="#" class="font-serif text-2xl font-semibold tracking-tight flex items-center gap-4 text-cream">
+            <img src="../assets/logo.jpg" alt="Logo" class="h-12 md:h-14 opacity-90 rounded">
+            <span class="hidden md:block">THANH THU foreign Language Centre</span>
+            <span class="md:hidden">THANH THU FLC</span>
+        </a>
+        <nav class="hidden lg:flex gap-10 text-sm uppercase tracking-widest font-medium text-cream/90">
+            <a href="#about" class="hover:text-secondary transition-colors">Về chúng tôi</a>
+            <a href="#courses" class="hover:text-secondary transition-colors">Các khóa học</a>
+        </nav>
+        <a href="#contact" class="hidden lg:block text-sm uppercase tracking-widest font-medium text-cream border-b border-cream pb-1 hover:text-secondary hover:border-secondary transition-colors">Liên hệ</a>
+    </header>
+
+    <!-- Editorial Hero with Full Background -->
+    <section class="relative min-h-screen pt-32 pb-16 px-6 lg:px-12 flex items-center justify-center text-center overflow-hidden">
+        <!-- Full Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1920&q=80" alt="Background Hero" class="w-full h-full object-cover">
+            <!-- Clearer overlay for better image visibility -->
+            <div class="absolute inset-0 bg-[#0047AB]/65"></div>
+        </div>
+
+        <div class="w-full max-w-6xl relative z-10 flex flex-col items-center">
+            <span class="inline-block px-6 py-2 border border-cream/30 rounded-full text-sm uppercase tracking-widest text-cream mb-8 backdrop-blur-sm font-medium">Unlocking Your True Potential</span>
+            
+            <h1 class="font-serif text-6xl md:text-8xl lg:text-[10rem] leading-[1.1] tracking-tighter text-cream drop-shadow-2xl mb-8">
+                Tiếng Anh là<br>
+                <span class="italic text-secondary">chuyện nhỏ.</span>
+            </h1>
+            
+            <p class="max-w-3xl text-2xl md:text-3xl font-normal leading-relaxed text-cream drop-shadow-md mb-16">
+                Môi trường học tập đầy cảm hứng, giúp các bạn học sinh tự tin giao tiếp một cách tự nhiên nhất ngay từ hôm nay.
+            </p>
+            
+            <a href="#courses" class="inline-flex items-center gap-4 text-sm uppercase tracking-widest font-bold text-white bg-secondary px-10 py-5 hover:bg-cream hover:text-primary transition-colors duration-300">
+                Khám phá khóa học
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Editorial About Section (Grid Layout) -->
+    <section id="about" class="py-32 px-6 lg:px-12 relative overflow-hidden bg-cream">
+        <div class="max-w-7xl mx-auto">
+            <!-- Header -->
+            <div class="grid lg:grid-cols-2 gap-12 items-end mb-24">
+                <div>
+                    <span class="text-secondary font-bold tracking-widest uppercase text-sm mb-8 flex items-center gap-6">
+                        <span class="w-16 h-[2px] bg-secondary"></span>
+                        Empower Your Future
+                    </span>
+                    <h2 class="font-serif text-6xl md:text-7xl lg:text-[6rem] leading-[0.9] tracking-tighter text-primary">
+                        Học Vui,<br>
+                        <span class="italic text-primary/40">Nhớ Lâu.</span>
+                    </h2>
+                </div>
+                <div class="pb-4">
+                    <p class="text-primary/90 text-xl md:text-2xl font-normal leading-relaxed max-w-md border-l-2 border-primary/30 pl-8">
+                        Hành trang vững chắc giúp học viên bứt phá tiềm năng, không chỉ giỏi tiếng Anh mà còn phát triển toàn diện các kỹ năng thiết yếu.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Bento Grid of 4 Items -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-primary/20 border-y border-primary/20 relative z-10">
+                <!-- Item 1 -->
+                <div class="bg-cream p-10 md:p-12 group hover:bg-primary transition-colors duration-500 flex flex-col justify-between min-h-[420px]">
+                    <div class="flex justify-between items-start mb-12">
+                        <span class="font-serif text-6xl text-primary/10 group-hover:text-cream/10 transition-colors duration-500 leading-none">01</span>
+                        <div class="w-12 h-12 rounded-full border border-primary/20 group-hover:border-cream/20 flex items-center justify-center group-hover:bg-secondary group-hover:border-secondary transition-all duration-500">
+                            <svg class="w-5 h-5 text-primary group-hover:text-cream transform -rotate-45 group-hover:rotate-0 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-primary/60 group-hover:text-cream/70 uppercase tracking-[0.2em] mb-4 block transition-colors duration-500">Speak Fluently</span>
+                        <h3 class="text-3xl font-serif mb-4 text-primary group-hover:text-cream transition-colors duration-500">Giao Tiếp<br>Tự Tin</h3>
+                        <p class="text-primary/90 group-hover:text-cream/90 font-normal text-base leading-relaxed transition-colors duration-500">Môi trường 100% tiếng Anh giúp đập tan rào cản sợ sai, hình thành phản xạ tự nhiên qua các tình huống thực tế.</p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="bg-cream p-10 md:p-12 group hover:bg-primary transition-colors duration-500 flex flex-col justify-between min-h-[420px]">
+                    <div class="flex justify-between items-start mb-12">
+                        <span class="font-serif text-6xl text-primary/10 group-hover:text-cream/10 transition-colors duration-500 leading-none">02</span>
+                        <div class="w-12 h-12 rounded-full border border-primary/20 group-hover:border-cream/20 flex items-center justify-center group-hover:bg-secondary group-hover:border-secondary transition-all duration-500">
+                            <svg class="w-5 h-5 text-primary group-hover:text-cream transform -rotate-45 group-hover:rotate-0 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-primary/60 group-hover:text-cream/70 uppercase tracking-[0.2em] mb-4 block transition-colors duration-500">Think Outside The Box</span>
+                        <h3 class="text-3xl font-serif mb-4 text-primary group-hover:text-cream transition-colors duration-500">Tư Duy<br>Phản Biện</h3>
+                        <p class="text-primary/90 group-hover:text-cream/90 font-normal text-base leading-relaxed transition-colors duration-500">Không chỉ học ngôn ngữ, học viên được rèn luyện tư duy logic, kỹ năng tranh biện và giải quyết vấn đề sắc bén.</p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="bg-cream p-10 md:p-12 group hover:bg-primary transition-colors duration-500 flex flex-col justify-between min-h-[420px]">
+                    <div class="flex justify-between items-start mb-12">
+                        <span class="font-serif text-6xl text-primary/10 group-hover:text-cream/10 transition-colors duration-500 leading-none">03</span>
+                        <div class="w-12 h-12 rounded-full border border-primary/20 group-hover:border-cream/20 flex items-center justify-center group-hover:bg-secondary group-hover:border-secondary transition-all duration-500">
+                            <svg class="w-5 h-5 text-primary group-hover:text-cream transform -rotate-45 group-hover:rotate-0 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-primary/60 group-hover:text-cream/70 uppercase tracking-[0.2em] mb-4 block transition-colors duration-500">Achieve Your Goals</span>
+                        <h3 class="text-3xl font-serif mb-4 text-primary group-hover:text-cream transition-colors duration-500">Thành Tích<br>Chuẩn</h3>
+                        <p class="text-primary/90 group-hover:text-cream/90 font-normal text-base leading-relaxed transition-colors duration-500">Bứt phá điểm số trên trường và tự tin chinh phục các chứng chỉ quốc tế uy tín (Cambridge, IELTS).</p>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="bg-cream p-10 md:p-12 group hover:bg-primary transition-colors duration-500 flex flex-col justify-between min-h-[420px]">
+                    <div class="flex justify-between items-start mb-12">
+                        <span class="font-serif text-6xl text-primary/10 group-hover:text-cream/10 transition-colors duration-500 leading-none">04</span>
+                        <div class="w-12 h-12 rounded-full border border-primary/20 group-hover:border-cream/20 flex items-center justify-center group-hover:bg-secondary group-hover:border-secondary transition-all duration-500">
+                            <svg class="w-5 h-5 text-primary group-hover:text-cream transform -rotate-45 group-hover:rotate-0 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-primary/60 group-hover:text-cream/70 uppercase tracking-[0.2em] mb-4 block transition-colors duration-500">Ready For The World</span>
+                        <h3 class="text-3xl font-serif mb-4 text-primary group-hover:text-cream transition-colors duration-500">Tư Duy<br>Toàn Cầu</h3>
+                        <p class="text-primary/90 group-hover:text-cream/90 font-normal text-base leading-relaxed transition-colors duration-500">Mở rộng thế giới quan thông qua các bài học văn hóa, chuẩn bị hành trang vươn ra thế giới.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Large Typography Courses -->
+    <section id="courses" class="py-32 px-6 lg:px-12 bg-primary text-cream relative overflow-hidden">
+        <!-- Huge background text -->
+        <div class="absolute top-0 whitespace-nowrap text-[12vw] font-serif font-bold text-cream/5 pointer-events-none select-none">
+            YOUR JOURNEY
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto pt-20">
+            <div class="text-center mb-24">
+                <span class="text-secondary tracking-widest uppercase text-sm mb-4 block font-bold">Your Learning Journey</span>
+                <h2 class="text-5xl md:text-6xl font-serif">Khóa học của chúng mình</h2>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-x-12 gap-y-24 items-center">
+                <!-- Course 1: Cấp 1 -->
+                <div class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-bl-[4rem] rounded-tr-[2rem] mb-6 aspect-[4/3] border-organic parallax-wrapper bg-cream/10">
+                        <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?auto=format&fit=crop&w=800&q=80" alt="Tiểu học" class="w-full h-full object-cover parallax-img transition-all duration-700">
+                    </div>
+                    <span class="text-secondary text-base tracking-widest uppercase mb-2 block font-bold">Cấp 1 (Lớp 1 - 5)</span>
+                    <h3 class="font-serif text-4xl mb-4 group-hover:text-secondary transition-colors">Tiếng Anh Khám Phá</h3>
+                    <p class="text-cream/90 font-normal text-lg leading-relaxed mb-4">Xây dựng nền tảng từ vựng và ngữ pháp vững chắc qua các phương pháp học tập trực quan sinh động. Khơi dậy niềm đam mê học hỏi, giúp các em dạn dĩ, tự tin giao tiếp.</p>
+                    <div class="space-y-3 text-cream/80 text-base font-normal border-l-2 border-cream/40 pl-4">
+                        <p><strong class="text-cream font-bold">Mục tiêu:</strong> Tự tin giao tiếp, nền tảng Cambridge Starters/Movers/Flyers.</p>
+                        <p><strong class="text-cream font-bold">Phương pháp:</strong> Học qua dự án và trò chơi thực tế.</p>
+                    </div>
+                </div>
+
+                <!-- Course 2: Cấp 2 -->
+                <div class="group cursor-pointer lg:mt-32">
+                    <div class="overflow-hidden rounded-tr-[4rem] rounded-bl-[2rem] mb-6 aspect-[4/3] parallax-wrapper bg-cream/10">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="THCS" class="w-full h-full object-cover parallax-img transition-all duration-700">
+                    </div>
+                    <span class="text-secondary text-base tracking-widest uppercase mb-2 block font-bold">Cấp 2 (Lớp 6 - 9)</span>
+                    <h3 class="font-serif text-4xl mb-4 group-hover:text-secondary transition-colors">Tiếng Anh Bứt Phá</h3>
+                    <p class="text-cream/90 font-normal text-lg leading-relaxed mb-4">Phát triển toàn diện 4 kỹ năng Nghe - Nói - Đọc - Viết. Bám sát chương trình học trên trường để đạt điểm số cao, đồng thời rèn luyện phản xạ giao tiếp tự nhiên.</p>
+                    <div class="space-y-3 text-cream/80 text-base font-normal border-l-2 border-cream/40 pl-4">
+                        <p><strong class="text-cream font-bold">Mục tiêu:</strong> Đạt điểm giỏi trên trường, chinh phục chứng chỉ KET/PET.</p>
+                        <p><strong class="text-cream font-bold">Phương pháp:</strong> Rèn luyện tư duy phản biện (Critical thinking), thuyết trình.</p>
+                    </div>
+                </div>
+
+                <!-- Course 3: Cấp 3 -->
+                <div class="group cursor-pointer lg:col-span-2 max-w-5xl mx-auto mt-12 lg:mt-24">
+                    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                        <div class="overflow-hidden rounded-tl-[4rem] rounded-br-[4rem] aspect-[4/3] parallax-wrapper bg-cream/10 order-2 lg:order-1">
+                            <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80" alt="THPT" class="w-full h-full object-cover parallax-img transition-all duration-700">
+                        </div>
+                        <div class="order-1 lg:order-2">
+                            <span class="text-cream text-base tracking-widest uppercase mb-2 block font-bold">Cấp 3 (Lớp 10 - 12)</span>
+                            <h3 class="font-serif text-4xl mb-4 group-hover:text-cream transition-colors">Luyện Thi THPT & IELTS</h3>
+                            <p class="text-cream/90 font-normal text-lg leading-relaxed mb-4">Lộ trình học tập chuyên sâu được thiết kế riêng biệt để chinh phục kỳ thi THPT Quốc Gia và lấy chứng chỉ IELTS. Rèn luyện chiến thuật làm bài cực kỳ sắc bén.</p>
+                            <div class="space-y-3 text-cream/80 text-base font-normal border-l-2 border-cream/40 pl-4">
+                                <p><strong class="text-cream font-bold">Mục tiêu:</strong> Điểm 9+ THPT môn Anh, IELTS 6.5+ mở rộng xét tuyển.</p>
+                                <p><strong class="text-cream font-bold">Phương pháp:</strong> Cày đề chuyên sâu, tối ưu chiến thuật làm bài thi 1-1.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Minimal Contact Section -->
+    <section id="contact" class="py-32 px-6 lg:px-12 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <span class="text-secondary tracking-widest uppercase text-sm mb-6 block font-bold">Let's Start Your Journey</span>
+            <h2 class="font-serif text-5xl md:text-7xl mb-10">Cùng bạn chinh phục <br><span class="italic text-primary/50">Tiếng Anh.</span></h2>
+            <p class="text-xl md:text-2xl text-primary/90 font-medium mb-16">Để lại lời nhắn hoặc gọi ngay cho trung tâm để được tư vấn lộ trình học tập tối ưu nhất cho bạn nhé.</p>
+            
+            <div class="flex flex-col lg:flex-row justify-center gap-8 items-center mb-24">
+                <a href="tel:0858208123" class="text-xl md:text-2xl font-serif border-b border-primary pb-2 hover:text-secondary hover:border-secondary transition-colors whitespace-nowrap">
+                    Hotline: 0858 208 123
+                </a>
+                <span class="hidden lg:block text-secondary">•</span>
+                <span class="text-xl md:text-2xl font-serif border-b border-primary pb-2 text-center">
+                    Số 6 Nguyễn Trung Trực, ấp Tân Thạnh, Tây Ninh
+                </span>
+            </div>
+
+            <!-- Google Map -->
+            <div class="h-[50vh] w-full max-w-5xl mx-auto rounded-[3rem] overflow-hidden mb-16 filter grayscale-[50%] hover:grayscale-0 transition-all duration-700 shadow-xl border-4 border-white">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.6828557991393!2d106.0965008!3d11.3361833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310b6d0e82c50257%3A0xc31920cd294e0259!2zNiBOZ3V54buFbiBUcnVuZyBUcuG7sWMsIFBoxrDhu51uZyAzLCBUw6J5IE5pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1711234567890!5m2!1svi!2s" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <div class="pt-12 border-t border-primary/20 flex flex-col md:flex-row justify-between text-sm text-primary/70 font-medium tracking-wider">
+                <p>Số 6 Nguyễn Trung Trực, ấp Tân Thạnh, tỉnh Tây Ninh</p>
+                <p>© 2026 THANH THU foreign Language Centre</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

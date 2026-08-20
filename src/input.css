@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-inter text-dark bg-white antialiased overflow-x-hidden selection:bg-primary selection:text-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-outfit tracking-tight;
+  }
+}
+
+@layer components {
+  .blob {
+    @apply absolute rounded-full mix-blend-multiply filter blur-3xl opacity-70 pointer-events-none;
+  }
+  
+  .glass-card {
+    @apply bg-white bg-opacity-80 backdrop-blur-lg border border-white border-opacity-50 shadow-soft rounded-[2rem];
+  }
+}
+
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
